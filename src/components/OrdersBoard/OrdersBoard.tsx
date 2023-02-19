@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Board, OrdersContainer, RequestsNumber } from "./OrdersBoard.styles";
-import { IOrdersBoard } from "./OrdersBoard.interface";
-import { OrderModal } from "../OrderModal/OrderModal";
-import { IOrder } from "../../types/Orders.interface";
-import { IconsRequests } from "../../common/IconsRequest";
+import React, { useState } from 'react';
+import { Board, OrdersContainer, RequestsNumber } from './OrdersBoard.styles';
+import { IOrdersBoard } from './OrdersBoard.interface';
+import { OrderModal } from '../OrderModal/OrderModal';
+import { IOrder } from '../../types/Orders.interface';
+import { IconsRequests } from '../../common/IconsRequest';
 
 export const OrdersBoard = ({ icon, title, orders }: IOrdersBoard) => {
   const [isVisibleModal, setIsVisibleModal] = useState(false);
@@ -11,14 +11,20 @@ export const OrdersBoard = ({ icon, title, orders }: IOrdersBoard) => {
 
   const handleOpenModal = (order: IOrder) => {
     setIsVisibleModal(true);
-    setSelectedOrder(order)
-  }
+    setSelectedOrder(order);
+  };
+
+  const handleCloseModal = () => {
+    setIsVisibleModal(false);
+    setSelectedOrder(null);
+  };
 
   return (
     <Board>
       <OrderModal
         visible={isVisibleModal}
         order={selectedOrder}
+        onClose={handleCloseModal}
       />
       <header>
         {IconsRequests(icon)}
