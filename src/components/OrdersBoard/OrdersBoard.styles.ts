@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken, transparentize } from 'polished';
 
 export const Board = styled.header`
   padding: 1rem;
@@ -36,6 +37,11 @@ export const OrdersContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.25rem;
+    transition: 0.3s;
+
+    &:hover {
+      background: #CCCCCC;
+    }
 
     strong {
       font-weight: 500;
