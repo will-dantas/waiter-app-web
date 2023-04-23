@@ -1,15 +1,15 @@
 import React from 'react';
 import Logo from '../../assets/images/logo.svg';
-import { Container, Content } from './Header.styles';
+import { Container, Content, PageDetails } from './Header.styles';
 
 export const Header = () => {
   return (
     <Container>
       <Content>
-        <div className="page-details">
+        <PageDetails>
           <h1>Pedidos</h1>
           <h2>Acompanhe os pedidos dos clientes</h2>
-        </div>
+        </PageDetails>
 
         <img src={Logo} alt="logo waiter-app" />
       </Content>
