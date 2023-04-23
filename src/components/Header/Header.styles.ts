@@ -14,9 +14,10 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
 
-  .page-details {
-    h1 {
+export const PageDetails = styled.div`
+ h1 {
       color: #fff;
       font-size: 2rem;
     }
@@ -28,5 +29,4 @@ export const Content = styled.div`
       opacity: 0.9;
       margin-top: 0.375rem;
     }
-  }
 `;

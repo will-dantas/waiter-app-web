@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { darken, transparentize } from 'polished';
 
 export const Board = styled.header`
   padding: 1rem;
@@ -8,8 +7,10 @@ export const Board = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex: 1;
+  -webkit-box-shadow: 0px 14px 24px -14px rgba(0,0,0,0.31);
+  -moz-box-shadow: 0px 14px 24px -14px rgba(0,0,0,0.31);
+  box-shadow: 0px 14px 24px -14px rgba(0,0,0,0.31);
 
   > header {
     padding: 0.5rem;
@@ -32,6 +33,7 @@ export const OrdersContainer = styled.div`
     border: 1px solid rgba(204, 204, 204, 0.4);
     height: 6rem;
     border-radius: 0.5rem;
+    border-bottom: 4px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
